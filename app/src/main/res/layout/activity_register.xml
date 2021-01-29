@@ -36,7 +36,7 @@
         android:id="@+id/et_pass"
         android:layout_width="120dp"
         android:layout_height="40dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="PassWord"
         android:inputType="textPersonName"
@@ -51,7 +51,7 @@
         android:id="@+id/et_name"
         android:layout_width="120dp"
         android:layout_height="40dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="Name"
         android:inputType="textPersonName"
@@ -66,7 +66,7 @@
         android:id="@+id/et_age"
         android:layout_width="120dp"
         android:layout_height="40dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="Age"
         android:inputType="textPersonName"
@@ -76,6 +76,43 @@
         app:layout_constraintEnd_toEndOf="@+id/view2"
         app:layout_constraintStart_toStartOf="@+id/view2"
         app:layout_constraintTop_toBottomOf="@+id/et_name" />
+
+
+    <RadioGroup
+        android:id="@+id/radioGroup2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/view2"
+        app:layout_constraintHorizontal_bias="0.28"
+        app:layout_constraintStart_toStartOf="@+id/view2"
+        app:layout_constraintTop_toBottomOf="@+id/et_age">
+
+        <RadioButton
+            android:id="@+id/radio_male"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="8dp"
+            android:checked="true"
+            android:text="male"
+            android:textColor="#000000"
+            app:layout_constraintStart_toStartOf="@+id/view2"
+            app:layout_constraintTop_toBottomOf="@+id/et_age" />
+
+        <RadioButton
+            android:id="@+id/radio_female"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="female"
+            android:textColor="#000000"
+            app:layout_constraintEnd_toEndOf="@+id/view2"
+            app:layout_constraintStart_toEndOf="@+id/radio_male"
+            app:layout_constraintTop_toBottomOf="@+id/et_age" />
+
+    </RadioGroup>
 
     <Button
         android:id="@+id/btn_register"
@@ -87,7 +124,9 @@
         android:textColor="#000000"
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="@+id/view2"
+        app:layout_constraintHorizontal_bias="0.47"
         app:layout_constraintStart_toStartOf="@+id/view2"
-        app:layout_constraintTop_toBottomOf="@+id/et_age" />
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup2" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

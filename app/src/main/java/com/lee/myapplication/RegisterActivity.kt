@@ -30,12 +30,19 @@ class RegisterActivity : AppCompatActivity() {
             val userPass = et_pass.getText().toString()
             val userName = et_name.getText().toString()
             val userAge = et_age.getText().toString().toInt()
+            var userSex =1
+            radioGroup2.setOnCheckedChangeListener{radioGroup2, checkedId ->
+                when(checkedId){
+                    R.id.radio_male -> {userSex=1}
+                    R.id.radio_female -> {userSex=2}
+                }
+            }
             val responseListener = Response.Listener<String>() {
             }
             Toast.makeText(this, "회원 등록에 성공하였습니다", Toast.LENGTH_SHORT).show()
             val intent = Intent(this@RegisterActivity, LoginActivity::class.java)
             startActivity(intent)
-            val registerRequest = RegisterRequest(userID, userPass, userName, userAge, responseListener)
+            val registerRequest = RegisterRequest(userID, userPass, userName, userAge, userSex, responseListener)
             val queue = Volley.newRequestQueue(this@RegisterActivity)
             queue.add(registerRequest)
 

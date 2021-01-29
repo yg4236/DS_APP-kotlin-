@@ -6,9 +6,11 @@
     $userPassword = $_POST["userPassword"];
     $userName = $_POST["userName"];
     $userAge = $_POST["userAge"];
+    $userSex = $_POST["userSex"];
 
-    $statement = mysqli_prepare($con, "INSERT INTO USER VALUES (?,?,?,?)");
-    mysqli_stmt_bind_param($statement, "sssi", $userID, $userPassword, $userName, $userAge);
+
+    $statement = mysqli_prepare($con, "INSERT INTO USER VALUES (?,?,?,?,?)");
+    mysqli_stmt_bind_param($statement, "sssii", $userID, $userPassword, $userName, $userAge, $userSex);
     mysqli_stmt_execute($statement);
 
 

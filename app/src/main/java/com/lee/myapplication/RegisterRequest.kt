@@ -5,7 +5,7 @@ import com.android.volley.Response
 import com.android.volley.toolbox.StringRequest
 import java.util.*
 
-class RegisterRequest(userID: String, userPassword: String, userName: String, userAge: Int, listener: Response.Listener<String>) : StringRequest(Method.POST, URL, listener, null) {
+class RegisterRequest(userID: String, userPassword: String, userName: String, userAge: Int,userSex: Int, listener: Response.Listener<String>) : StringRequest(Method.POST, URL, listener, null) {
     private val map: MutableMap<String, String>
 
     @Throws(AuthFailureError::class)
@@ -24,5 +24,6 @@ class RegisterRequest(userID: String, userPassword: String, userName: String, us
         map["userPassword"] = userPassword
         map["userName"] = userName
         map["userAge"] = userAge.toString() + ""
+        map["userSex"] = userSex.toString() +""
     }
 }
