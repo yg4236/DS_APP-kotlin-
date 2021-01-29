@@ -28,10 +28,11 @@ class LoginActivity : AppCompatActivity() {
             val userPass = et_pass.getText().toString()
             val responseListener = Response.Listener<String>(){
             }
+            // 로그인 실패 구현 해야 됨
             Toast.makeText(this, "로그인에 성공하였습니다", Toast.LENGTH_SHORT).show()
             val intent = Intent(this@LoginActivity, MainActivity::class.java)
-            intent.putExtra("userID", userID)
-            intent.putExtra("userPass", userPass)
+//            intent.putExtra("userID", userID)
+//            intent.putExtra("userPass", userPass)
             startActivity(intent)
             val loginRequest = LoginRequest(userID, userPass, responseListener)
             val queue = Volley.newRequestQueue(this@LoginActivity)
