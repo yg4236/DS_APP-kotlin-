@@ -8,3 +8,5 @@
 
 ## Menu Worldcup ( php에 16강 대진에 참가할 음식정보 랜덤으로 담아오기 까지 완성)
 ![image](https://user-images.githubusercontent.com/62757915/106287367-0a22e500-628a-11eb-9912-481aafeaecc2.png)
+</br> 한글이 깨져서 나옴
+![image](https://user-images.githubusercontent.com/62757915/106287546-435b5500-628a-11eb-9941-f307cd328e2e.png)
