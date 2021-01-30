@@ -42,9 +42,9 @@ $f_num = randNoneDup(1, 64, 16);
 ///////////////////////////////////////
     $con = mysqli_connect("localhost", "yg4236", "dbsrb0418!", "yg4236");
     mysqli_query($con,'SET NAMES utf8');
-
-
-
+    mysqli_query($con,'set session character_set_connection=utf8');
+    mysqli_query($con,'set session character_set_results=utf8');
+    mysqli_query($con,'set session character_set_client=utf8');
 
 
     $statement = "SELECT * FROM food WHERE f_num =".$f_num[0]." or f_num =".$f_num[1]." or f_num =".$f_num[2]." or f_num =".$f_num[3]." or f_num =".$f_num[4]." or f_num =".$f_num[5]." or f_num =".$f_num[6]." or f_num =".$f_num[7]." or f_num =".$f_num[8]." or f_num =".$f_num[9]." or f_num =".$f_num[10]." or f_num =".$f_num[11]." or f_num =".$f_num[12]." or f_num =".$f_num[13]." or f_num =".$f_num[14]." or f_num =".$f_num[15]."";
@@ -54,13 +54,28 @@ $f_num = randNoneDup(1, 64, 16);
 
     $result = mysqli_query($con,$statement);
     while($row = mysqli_fetch_array($result)){
-        echo $row['f_Name'];
-        echo $row['calorie'];
-        echo $row['car'];
-        echo $row['pro'];
-        echo $row['fat'];
-        echo $row['win_count'];
+        $res['f_num'] = $row["f_num"];
+        $res['f_Name'] = urlencode($row["f_Name"]);
+        $res['calorie'] = $row["calorie"];
+        $res['car'] = $row["car"];
+        $res['pro'] = $row["pro"];
+        $res['fat'] = $row["fat"];
+        $res['win_count'] = $row["win_count"];
+        $arr["result"][] = $res;
     }
+    $json = json_encode($arr);
+    //$json = urlencode($json);
+    print $json;
+//     while($row = mysqli_fetch_array($result)){
+//         echo json_encode($row);
+// //          echo json_encode($row['f_Name']);
+// //         echo json_encode($row['calorie']);
+// //         echo json_encode($row['car']);
+// //         echo json_encode($row['pro']);
+// //         echo json_encode($row['fat']);
+// //         echo json_encode($row['win_count']);
+// //         echo (</br>);
+//     }
 
 ///////////////////////////////////
 ?>
