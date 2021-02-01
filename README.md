@@ -15,3 +15,10 @@
 ![image](https://user-images.githubusercontent.com/62757915/106353424-d0a3b580-632d-11eb-8294-91ead3ab3456.png)
 </br>json형태로 16개의 메뉴를 랜덤으로 가져옴 (랜덤메뉴선정 코드는 worldcup.php 안에 포함), 한글 깨짐 처리 못함 </br> 
 ![image](https://user-images.githubusercontent.com/62757915/106353433-e1542b80-632d-11eb-9a85-93285576f19b.png)
+
+## 2021.02.01 Menu Worldcup ( 이상형 월드컵 진행, 우승 메뉴까지 뽑기)
+![image](https://user-images.githubusercontent.com/62757915/106443145-83efe400-64bf-11eb-8514-f489190c24e1.png)
+![image](https://user-images.githubusercontent.com/62757915/106443179-89e5c500-64bf-11eb-895f-970191fda5ed.png)
+![image](https://user-images.githubusercontent.com/62757915/106443211-92d69680-64bf-11eb-90f4-c05936989369.png)
+![image](https://user-images.githubusercontent.com/62757915/106443258-a08c1c00-64bf-11eb-9045-305db04fd135.png)
+</br>이상형 월드컵을 진행하면서 인덱스를 담는과정에서 오류가 있어보임(같은 메뉴가 중복출전) , 한글 깨짐 처리 못함 </br> 
