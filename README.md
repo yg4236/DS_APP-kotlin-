@@ -22,3 +22,8 @@
 ![image](https://user-images.githubusercontent.com/62757915/106443211-92d69680-64bf-11eb-90f4-c05936989369.png)
 ![image](https://user-images.githubusercontent.com/62757915/106443258-a08c1c00-64bf-11eb-9045-305db04fd135.png)
 </br>이상형 월드컵을 진행하면서 인덱스를 담는과정에서 오류가 있어보임(같은 메뉴가 중복출전) , 한글 깨짐 처리 못함 </br> 
+
+## 2021.02.08 PHP Modified
+![php캡](https://user-images.githubusercontent.com/62757915/107182592-628f7a80-6a20-11eb-9d3b-83e5715caaa7.PNG)
+</br> json_encode를 할때 코드 포인트 값에 따라 \ud0d5 이런식으로 자동 변환이 되는 것이고 이를 원문 그대로 사용하려면 JSON_UNESCAPED_UNICODE 값을 넣어주어야 함.</br> 
+```$json = json_encode($arr, JSON_UNESCAPED_UNICODE);```</br> 하지만 여전히 한글은 깨지고 있음 (PHP에는 문제가 없고, DB에서 contents를 가져오는 과정에서 깨지는것 같아보임.
