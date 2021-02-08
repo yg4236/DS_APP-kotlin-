@@ -27,3 +27,10 @@
 ![php캡](https://user-images.githubusercontent.com/62757915/107182592-628f7a80-6a20-11eb-9d3b-83e5715caaa7.PNG)
 </br> json_encode를 할때 코드 포인트 값에 따라 \ud0d5 이런식으로 자동 변환이 되는 것이고 이를 원문 그대로 사용하려면 JSON_UNESCAPED_UNICODE 값을 넣어주어야 함.</br> 
 ```$json = json_encode($arr, JSON_UNESCAPED_UNICODE);```</br> 하지만 여전히 한글은 깨지고 있음 (PHP에는 문제가 없고, DB에서 contents를 가져오는 과정에서 깨지는것 같아보임.
+
+## 2021.02.09 PHP Modified
+![image](https://user-images.githubusercontent.com/62757915/107235259-db65f500-6a67-11eb-8394-537bf282809a.png)
+</br> php파일 인코딩을 UTF-8로 바꾸어 한글깨짐현상을 해결하였다.
+```header('Content-Type: text/html; charset=utf-8');``` 다음 라인을 추가하여 인코딩 변경
+</br> 하지만 이 과정에서 출력되는 json의 형태가 변형되어 worldcupActivity에서 웹서버에 접근해 contents를 parsing하는 과정에서 에러가 발생하였다.</br>
+![image](https://user-images.githubusercontent.com/62757915/107238520-47962800-6a6b-11eb-992e-77c0d6c99f52.png)
