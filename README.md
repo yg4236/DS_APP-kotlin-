@@ -34,3 +34,11 @@
 ```header('Content-Type: text/html; charset=utf-8');``` 다음 라인을 추가하여 인코딩 변경
 </br> 하지만 이 과정에서 출력되는 json의 형태가 변형되어 worldcupActivity에서 웹서버에 접근해 contents를 parsing하는 과정에서 에러가 발생하였다.</br>
 ![image](https://user-images.githubusercontent.com/62757915/107238520-47962800-6a6b-11eb-992e-77c0d6c99f52.png)
+
+## 2021.02.12 PHP Modified & WorldCup Algorithm Modified
+</br> php파일에서 맨위의 html 코드를 제거하였더니 위의 에러가 해결되었다. 하지만 여전히 어플에서 불러오면 f_Name이 null로 표기된다</br>
+![image](https://user-images.githubusercontent.com/62757915/107772230-54728e80-6d7f-11eb-8d43-1aee91d08381.png)
+![image](https://user-images.githubusercontent.com/62757915/107772295-69e7b880-6d7f-11eb-9035-fc59cc7ab3a6.png)
+![image](https://user-images.githubusercontent.com/62757915/107772345-78ce6b00-6d7f-11eb-8808-f2e49c227f01.png)
+</br> Worldcup 알고리즘을 전의 알고리즘보다 쉽게 onCreate에서 fetch를 한번만하여 전역변수 array에 대진표를 저장해와 onCreate에서 나머지 worldcup을 수행하려한다
+
