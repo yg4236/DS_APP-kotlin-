@@ -38,7 +38,7 @@
 ## 2021.02.12 PHP Modified & WorldCup Algorithm Modified
 </br> php파일에서 맨위의 html 코드를 제거하였더니 위의 에러가 해결되었다. 하지만 여전히 어플에서 불러오면 f_Name이 null로 표기된다</br>
 ![image](https://user-images.githubusercontent.com/62757915/107772230-54728e80-6d7f-11eb-8d43-1aee91d08381.png)
-![image](https://user-images.githubusercontent.com/62757915/107772295-69e7b880-6d7f-11eb-9035-fc59cc7ab3a6.png)
-![image](https://user-images.githubusercontent.com/62757915/107772345-78ce6b00-6d7f-11eb-8808-f2e49c227f01.png)
+![image](https://user-images.githubusercontent.com/62757915/107773114-859f8e80-6d80-11eb-8223-546fd57471e8.png)
+![image](https://user-images.githubusercontent.com/62757915/107773174-a10a9980-6d80-11eb-98ee-f1efaa19d507.png)
 </br> Worldcup 알고리즘을 전의 알고리즘보다 쉽게 onCreate에서 fetch를 한번만하여 전역변수 array에 대진표를 저장해와 onCreate에서 나머지 worldcup을 수행하려한다
 
