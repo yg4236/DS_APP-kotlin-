@@ -1,6 +1,6 @@
 <!-- <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> -->
 <?php
-
+header('Content-Type: text/html; charset=utf-8');
 
 
 
@@ -37,7 +37,7 @@ $f_num = randNoneDup(1, 64, 16);
 
 ///////////////////////////////////////
     $con = mysqli_connect("localhost", "yg4236", "dbsrb0418!", "yg4236");
-    mysqli_query($con,"SET NAMES utf8_general_ci");
+    mysqli_query($con,"SET NAMES utf8");
 
     mysqli_query($con, "set session character_set_connection=utf8;");
 
@@ -55,6 +55,7 @@ $f_num = randNoneDup(1, 64, 16);
     $result = mysqli_query($con,$statement);
     while($row = mysqli_fetch_array($result)){
         $res['f_num'] = $row["f_num"];
+
         $res['f_Name'] = $row["f_Name"];
         $res['calorie'] = $row["calorie"];
         $res['car'] = $row["car"];
@@ -62,12 +63,13 @@ $f_num = randNoneDup(1, 64, 16);
         $res['fat'] = $row["fat"];
         $res['win_count'] = $row["win_count"];
         $arr["result"][] = $res;
+        
     }
     $json = json_encode($arr,JSON_UNESCAPED_UNICODE);
     //$json = json_encode($arr);
-    //print $json;
+   print $json;
     //$json=
-    print json_decode($json->f_Name);
+   // print json_decode($json);
     //print $json->f_Name;
     //print json_decode($json->f_Name);
 

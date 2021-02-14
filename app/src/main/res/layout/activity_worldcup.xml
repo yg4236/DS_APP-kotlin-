@@ -22,7 +22,7 @@
         android:id="@+id/first_menu"
         android:layout_width="151dp"
         android:layout_height="116dp"
-        android:text="TextView"
+        android:text="loading..."
         android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="@+id/view3"
         app:layout_constraintTop_toTopOf="@+id/view3" />
@@ -31,7 +31,7 @@
         android:id="@+id/second_menu"
         android:layout_width="154dp"
         android:layout_height="112dp"
-        android:text="TextView"
+        android:text="loading..."
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="@+id/view3"
         app:layout_constraintEnd_toEndOf="@+id/view3" />
