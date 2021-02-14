@@ -42,3 +42,8 @@
 ![image](https://user-images.githubusercontent.com/62757915/107773174-a10a9980-6d80-11eb-98ee-f1efaa19d507.png)
 </br> Worldcup 알고리즘을 전의 알고리즘보다 쉽게 onCreate에서 fetch를 한번만하여 전역변수 array에 대진표를 저장해와 onCreate에서 나머지 worldcup을 수행하려한다
 
+## 2021.02.14 WorldCup Algorithm Modified
+![image](https://user-images.githubusercontent.com/62757915/107879674-9b968600-6f1d-11eb-8381-b31b9ac94799.png)
+</br> 위의 코드를 추가하여 fetch와 메뉴의 이름을 바꾸어주는 사이에 delay를 주었다. -> fetch전에 메뉴의 이름을 바꾸어 값을 못읽어오는 사태를 방지</br>
+![worldcup 21 02 14](https://user-images.githubusercontent.com/62757915/107879677-a05b3a00-6f1d-11eb-950c-a576cc88a8d0.gif)
+</br> 메뉴이름이 null로 나오는 부분 빼고 기본적인 이상형 월드컵의 틀을 완성했다.
