@@ -1,5 +1,6 @@
 package com.lee.myapplication
 
+import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.util.Log
@@ -27,7 +28,6 @@ var Arr_f_car = arrayOfNulls<Double>(16)
 var Arr_f_pro = arrayOfNulls<Double>(16)
 var Arr_f_fat = arrayOfNulls<Double>(16)
 
-<<<<<<< HEAD
 var eight_Arr_f_num= arrayOfNulls<Int>(8)
 var eight_Arr_f_name= arrayOfNulls<String>(8)
 var eight_Arr_f_calorie = arrayOfNulls<Double>(8)
@@ -49,8 +49,6 @@ var final_Arr_f_car = arrayOfNulls<Double>(2)
 var final_Arr_f_pro = arrayOfNulls<Double>(2)
 var final_Arr_f_fat = arrayOfNulls<Double>(2)
 
-=======
->>>>>>> 69f32db89ce5d82776afa255455ff4aedbe9cf7b
 
 class worldcupActivity : AppCompatActivity() {
 
@@ -67,7 +65,6 @@ class worldcupActivity : AppCompatActivity() {
         Toast.makeText(this, "월드컵 시작", Toast.LENGTH_SHORT).show()
         var click :Boolean
         fetchJson()
-//        for(k in 0..14 step 2) {
 
         click = true
         Handler().postDelayed({
@@ -142,8 +139,10 @@ class worldcupActivity : AppCompatActivity() {
         }
         else{//결승
 
-<<<<<<< HEAD
             first_menu.text ="\t${final_Arr_f_name[0]}우승!"
+            val intent = Intent(this, win_menu::class.java)
+            intent.putExtra("f_Name", final_Arr_f_calorie[0])
+            startActivity(intent)
         }
     }
     second_menu.setOnClickListener {
@@ -207,27 +206,15 @@ class worldcupActivity : AppCompatActivity() {
             }
         }
         else{//결승
-=======
-        fetchJson()
-        first_menu.text="\t${Arr_f_name[0]}\ncalorie : ${Arr_f_calorie[0]}\ncar : ${Arr_f_car[0]}\npro : ${Arr_f_pro[0]}\nfat : ${Arr_f_fat[0]}"
-        second_menu.text="\t${Arr_f_name[1]}\ncalorie : ${Arr_f_calorie[1]}\ncar : ${Arr_f_car[1]}\npro : ${Arr_f_pro[1]}\nfat : ${Arr_f_fat[1]}"
-        first_menu.setOnClickListener {
-            first_menu.text="\t${Arr_f_name[2]}\ncalorie : ${Arr_f_calorie[2]}\ncar : ${Arr_f_car[2]}\npro : ${Arr_f_pro[2]}\nfat : ${Arr_f_fat[2]}"
-        }
-        second_menu.setOnClickListener {
-            second_menu.text="\t${Arr_f_name[3]}\ncalorie : ${Arr_f_calorie[3]}\ncar : ${Arr_f_car[3]}\npro : ${Arr_f_pro[3]}\nfat : ${Arr_f_fat[3]}"
-        }
-
->>>>>>> 69f32db89ce5d82776afa255455ff4aedbe9cf7b
 
             first_menu.text ="\t${final_Arr_f_name[1]}우승!"
+            val intent = Intent(this, win_menu::class.java)
+            intent.putExtra("f_Name", final_Arr_f_calorie[1])
+            startActivity(intent)
         }
     }
-<<<<<<< HEAD
 
     }
-=======
->>>>>>> 69f32db89ce5d82776afa255455ff4aedbe9cf7b
     private val client = OkHttpClient()
     fun fetchJson(){
         val url = URL("http://yg4236.dothome.co.kr/worldcup.php")
@@ -255,8 +242,7 @@ class worldcupActivity : AppCompatActivity() {
 
 
 }
-//first_menu.text ="\t${list.result[i].f_name}\ncalorie : ${list.result[i].calorie}\ncar : ${list.result[i].car}\npro : ${list.result[i].pro}\nfat : ${list.result[i].fat}"
-//second_menu.text = "\t${list.result[i+1].f_name}\ncalorie : ${list.result[i+1].calorie}\ncar : ${list.result[i+1].car}\npro : ${list.result[i+1].pro}\nfat : ${list.result[i+1].fat}"
+
 
 data class JsonObj(val result : List<Menu>)
 data class Menu (val f_num:Int, val f_name:String, val calorie:Double, val car:Double, val pro:Double, val fat:Double, val win_count:Int )

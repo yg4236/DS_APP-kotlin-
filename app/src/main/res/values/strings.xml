@@ -7,4 +7,6 @@
     -->
     <string name="hello_world">Hello Square World!</string>
     <string name="title_activity_viewchart">ViewchartActivity</string>
+    <string name="title_activity_win_menu_list">WinMenuList</string>
+    <string name="title_activity_win_menu">win_menu</string>
 </resources>

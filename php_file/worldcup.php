@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 <!-- <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> -->
-=======
-
->>>>>>> 69f32db89ce5d82776afa255455ff4aedbe9cf7b
 <?php
 header('Content-Type: text/html; charset=utf-8');
 
