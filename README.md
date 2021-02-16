@@ -47,3 +47,7 @@
 </br> 위의 코드를 추가하여 fetch와 메뉴의 이름을 바꾸어주는 사이에 delay를 주었다. -> fetch전에 메뉴의 이름을 바꾸어 값을 못읽어오는 사태를 방지</br>
 ![worldcup 21 02 14](https://user-images.githubusercontent.com/62757915/107879677-a05b3a00-6f1d-11eb-950c-a576cc88a8d0.gif)
 </br> 메뉴이름이 null로 나오는 부분 빼고 기본적인 이상형 월드컵의 틀을 완성했다.
+
+## 2021.02.16 Win_Menu_List
+![image](https://user-images.githubusercontent.com/62757915/108087690-08935280-70bb-11eb-985e-937c2030669f.png)
+</br> 이상형 월드컵에서 메뉴가 정해지면 화면전환하여 우승 메뉴와 우승 메뉴를 판매하는 음식점 리스트를 가져온다. 음식점 리스트는 새로운 php 파일로 음식점 정보를 받아와 리사이클러뷰에 넣을 계획 
