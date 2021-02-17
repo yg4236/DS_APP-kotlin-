@@ -58,4 +58,5 @@
 ![image](https://user-images.githubusercontent.com/62757915/108189242-df72d080-7153-11eb-8cba-e949a2422595.png)
 ![image](https://user-images.githubusercontent.com/62757915/108188566-11376780-7153-11eb-802e-fbbd4ea8858d.png)
 </br> 웹서버에 print한 json형태의 result에서 메뉴를 담는 column의 title이 다른 문제였다. (기존에 f_name으로 되어 있었다)</br>
-추가로 DB의 강남 음식점리스트에서 우승 메뉴를 판매하는 식당리스트를 가져오는 php와 List_RequestActivity를 작성하였다. php에 아무 음식을 넣고 테스트하면 음식점이 잘 출력되나, List_RequsetActivity에서 우승메뉴를 넘겨주어 DB에 접근하면 읽어지지 않는다.
+![image](https://user-images.githubusercontent.com/62757915/108189889-97a07900-7154-11eb-87ae-51ad7cb13d1c.png)
+</br>추가로 DB의 강남 음식점리스트에서 우승 메뉴를 판매하는 식당리스트를 가져오는 php와 List_RequestActivity를 작성하였다. php에 아무 음식을 넣고 테스트하면 음식점이 잘 출력되나, List_RequsetActivity에서 우승메뉴를 넘겨주어 DB에 접근하면 읽어지지 않는다.
