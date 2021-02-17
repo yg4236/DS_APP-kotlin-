@@ -51,3 +51,9 @@
 ## 2021.02.16 Win_Menu_List
 ![image](https://user-images.githubusercontent.com/62757915/108087690-08935280-70bb-11eb-985e-937c2030669f.png)
 </br> 이상형 월드컵에서 메뉴가 정해지면 화면전환하여 우승 메뉴와 우승 메뉴를 판매하는 음식점 리스트를 가져온다. 음식점 리스트는 새로운 php 파일로 음식점 정보를 받아와 리사이클러뷰에 넣을 계획 
+
+## 2021.02.17 Win_Menu_List & List_Request
+![worldcup 21 02 17](https://user-images.githubusercontent.com/62757915/108188520-0381e200-7153-11eb-81ec-529c4e53b914.gif)
+</br> 한글이 null로 나오는 현상 해결
+![image](https://user-images.githubusercontent.com/62757915/108188566-11376780-7153-11eb-802e-fbbd4ea8858d.png)
+</br> 웹서버에 print한 json형태의 result
