@@ -24,14 +24,26 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
         android:layout_width="320dp"
         android:layout_height="465dp"
+        android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/winner"
-        app:layout_constraintVertical_bias="0.635"
-        android:textColor="#000000"/>
+        app:layout_constraintVertical_bias="0.635" />
+
+    <TextView
+        android:id="@+id/rest"
+        android:layout_width="wrap_content"
+        android:layout_height="19dp"
+        android:layout_marginTop="16dp"
+        android:text="음식점 리스트 : loading.."
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/winner" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -21,28 +21,24 @@ import org.json.JSONObject
 import java.io.IOException
 import java.net.URL
 
-var Arr_f_num= arrayOfNulls<Int>(16)
 var Arr_f_name= arrayOfNulls<String>(16)
 var Arr_f_calorie = arrayOfNulls<Double>(16)
 var Arr_f_car = arrayOfNulls<Double>(16)
 var Arr_f_pro = arrayOfNulls<Double>(16)
 var Arr_f_fat = arrayOfNulls<Double>(16)
 
-var eight_Arr_f_num= arrayOfNulls<Int>(8)
 var eight_Arr_f_name= arrayOfNulls<String>(8)
 var eight_Arr_f_calorie = arrayOfNulls<Double>(8)
 var eight_Arr_f_car = arrayOfNulls<Double>(8)
 var eight_Arr_f_pro = arrayOfNulls<Double>(8)
 var eight_Arr_f_fat = arrayOfNulls<Double>(8)
 
-var four_Arr_f_num= arrayOfNulls<Int>(4)
 var four_Arr_f_name= arrayOfNulls<String>(4)
 var four_Arr_f_calorie = arrayOfNulls<Double>(4)
 var four_Arr_f_car = arrayOfNulls<Double>(4)
 var four_Arr_f_pro = arrayOfNulls<Double>(4)
 var four_Arr_f_fat = arrayOfNulls<Double>(4)
 
-var final_Arr_f_num= arrayOfNulls<Int>(2)
 var final_Arr_f_name= arrayOfNulls<String>(2)
 var final_Arr_f_calorie = arrayOfNulls<Double>(2)
 var final_Arr_f_car = arrayOfNulls<Double>(2)
@@ -79,7 +75,7 @@ class worldcupActivity : AppCompatActivity() {
         var finalIndex=0
     first_menu.setOnClickListener {
         if(round>=2 && round<=16) {///16강
-            eight_Arr_f_num[eightIndex] = Arr_f_num[round - 2]
+
             eight_Arr_f_name[eightIndex] = Arr_f_name[round - 2]
             eight_Arr_f_calorie[eightIndex] = Arr_f_calorie[round - 2]
             eight_Arr_f_car[eightIndex] = Arr_f_car[round - 2]
@@ -99,7 +95,6 @@ class worldcupActivity : AppCompatActivity() {
         }
         else if(round>=18&&round<=24){//8강
 
-            four_Arr_f_num[fourIndex] = eight_Arr_f_num[round-18]
             four_Arr_f_name[fourIndex] = eight_Arr_f_name[round-18]
             four_Arr_f_calorie[fourIndex] = eight_Arr_f_calorie[round-18]
             four_Arr_f_car[fourIndex] = eight_Arr_f_car[round-18]
@@ -119,7 +114,6 @@ class worldcupActivity : AppCompatActivity() {
         }
         else if(round>=26&&round<=28) {//4강
 
-            final_Arr_f_num[finalIndex] = four_Arr_f_num[round-26]
             final_Arr_f_name[finalIndex] = four_Arr_f_name[round-26]
             final_Arr_f_calorie[finalIndex] = four_Arr_f_calorie[round-26]
             final_Arr_f_car[finalIndex] = four_Arr_f_car[round-26]
@@ -141,13 +135,13 @@ class worldcupActivity : AppCompatActivity() {
 
             first_menu.text ="\t${final_Arr_f_name[0]}우승!"
             val intent = Intent(this, win_menu::class.java)
-            intent.putExtra("f_Name", final_Arr_f_calorie[0])
+            intent.putExtra("f_Name", final_Arr_f_name[0])
             startActivity(intent)
         }
     }
     second_menu.setOnClickListener {
         if(round>=2 && round<=16) {///16강
-            eight_Arr_f_num[eightIndex] = Arr_f_num[round - 1]
+
             eight_Arr_f_name[eightIndex] = Arr_f_name[round - 1]
             eight_Arr_f_calorie[eightIndex] = Arr_f_calorie[round - 1]
             eight_Arr_f_car[eightIndex] = Arr_f_car[round - 1]
@@ -167,7 +161,6 @@ class worldcupActivity : AppCompatActivity() {
         }
         else if(round>=18&&round<=24){//8강
 
-            four_Arr_f_num[fourIndex] = eight_Arr_f_num[round-17]
             four_Arr_f_name[fourIndex] = eight_Arr_f_name[round-17]
             four_Arr_f_calorie[fourIndex] = eight_Arr_f_calorie[round-17]
             four_Arr_f_car[fourIndex] = eight_Arr_f_car[round-17]
@@ -187,7 +180,6 @@ class worldcupActivity : AppCompatActivity() {
         }
         else if(round>=26&&round<=28) {//4강
 
-            final_Arr_f_num[finalIndex] = four_Arr_f_num[round-25]
             final_Arr_f_name[finalIndex] = four_Arr_f_name[round-25]
             final_Arr_f_calorie[finalIndex] = four_Arr_f_calorie[round-25]
             final_Arr_f_car[finalIndex] = four_Arr_f_car[round-25]
@@ -209,7 +201,7 @@ class worldcupActivity : AppCompatActivity() {
 
             first_menu.text ="\t${final_Arr_f_name[1]}우승!"
             val intent = Intent(this, win_menu::class.java)
-            intent.putExtra("f_Name", final_Arr_f_calorie[1])
+            intent.putExtra("f_Name", final_Arr_f_name[1])
             startActivity(intent)
         }
     }
@@ -228,8 +220,7 @@ class worldcupActivity : AppCompatActivity() {
                 val gson = GsonBuilder().create()
                 val list = gson.fromJson(body, JsonObj::class.java)
                  for(j in 0..15){
-                    Arr_f_num[j] = list.result[j].f_num
-                    Arr_f_name[j] = list.result[j].f_name
+                    Arr_f_name[j] = list.result[j].f_Name
                     Arr_f_calorie[j] = list.result[j].calorie
                     Arr_f_car[j] = list.result[j].car
                     Arr_f_pro[j] = list.result[j].pro
@@ -245,4 +236,4 @@ class worldcupActivity : AppCompatActivity() {
 
 
 data class JsonObj(val result : List<Menu>)
-data class Menu (val f_num:Int, val f_name:String, val calorie:Double, val car:Double, val pro:Double, val fat:Double, val win_count:Int )
+data class Menu (val f_Name:String, val calorie:Double, val car:Double, val pro:Double, val fat:Double, val win_count:Int )
