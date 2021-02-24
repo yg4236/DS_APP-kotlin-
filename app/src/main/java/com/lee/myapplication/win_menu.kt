@@ -23,9 +23,7 @@ class win_menu : AppCompatActivity() {
         setContentView(R.layout.activity_win_menu)
 
         val intent = intent
-       // var f_Name ="default"
         val f_Name= intent.getStringExtra("f_Name").toString()
-        //val f_Name ="김치찌개"
         winner.text="${f_Name} 우승!"
 
         ///////////////////////////////////////////////////
@@ -49,10 +47,11 @@ class win_menu : AppCompatActivity() {
             }
             override fun onResponse(call: Call, response: okhttp3.Response) {
                 val body = response?.body?.string()
-                val gson = GsonBuilder().create()
-                val list = gson.fromJson(body, JsonObjj::class.java)
-                val j=0
-                rest.text="${list.result[0].name} ${list.result[1].name}"
+                winner.text="${body}"
+//                val gson = GsonBuilder().create()
+//                val list = gson.fromJson(body, JsonObjj::class.java)
+//                val j=0
+//                rest.text="${list.result[0].name} ${list.result[1].name}"
             }
         })
     }
