@@ -60,3 +60,9 @@
 </br> 웹서버에 print한 json형태의 result에서 메뉴를 담는 column의 title이 다른 문제였다. (기존에 f_name으로 되어 있었다)</br>
 ![image](https://user-images.githubusercontent.com/62757915/108189889-97a07900-7154-11eb-87ae-51ad7cb13d1c.png)
 </br>추가로 DB의 강남 음식점리스트에서 우승 메뉴를 판매하는 식당리스트를 가져오는 php와 List_RequestActivity를 작성하였다. php에 아무 음식을 넣고 테스트하면 음식점이 잘 출력되나, List_RequsetActivity에서 우승메뉴를 넘겨주어 DB에 접근하면 읽어지지 않는다.
+
+## 2021.02.24 List_test
+우승 메뉴를 판매하는 음식점 list를 불러오는 과정에서 php코드를 잘못 짰는지 
+</br>안드로이드 스튜디오에서 우승메뉴를 php에 넘기고, php에서 그 우승메뉴를 포함한 쿼리를 DB에 보내 웹서버에  음식점 리스트를 출력하는 코드가 작동하지 않아, 
+</br>우승음식이 php에 잘 보내지는지 test를 해보았는데 잘 전달되지 않는것 같다.
+![image](https://user-images.githubusercontent.com/62757915/108975611-038d5f00-76ca-11eb-8a10-08b35d22de39.png)
